@@ -1,4 +1,5 @@
 import math
+#Codes for finding primes in Sieve of Erathosthenes(O(nlog(logn))) Complexity and finding totient function and prime-factorization methods
 def prime(n):
 	L=[1]*(n+1)
 	L[0]=L[1]=0
@@ -74,26 +75,6 @@ def factorize(n):
 
 
 
-def finding(x,L,left,right):
-	mid=(left+right)//2
-	if(x<L[left]):
-		return -1
-	elif(x==L[left]):
-		return left
-	elif(x==L[right]):
-		return right
-	elif(x==L[mid]):
-		return mid
-	elif(x>L[right]):
-		return -1
-	else:
-		if(x<L[mid]):
-			return finding(x,L,left,mid)
-		else:
-			return finding(x,L,mid,right)
-
-
-
 def phi(n):
 	if(n==1):
 		return 1
@@ -137,7 +118,7 @@ def primefactorise(n,M):
 					M.append(i)
 			return primefactorise(n,M)
 
-print(primefactorise(100,[]))
+
 
 			
 
