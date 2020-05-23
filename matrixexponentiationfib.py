@@ -1,4 +1,5 @@
 import math
+#FASTEST CODE TO COMPUTE NTH FIBONACCI NUMBER (IN O(log n) Time and O(n) Space Complexity)
 
 def power(L,n):
 	if(n==1):
@@ -37,6 +38,9 @@ def fib(n):
 		A=[[1,1],[1,0]]
 		B=power(A,n)
 		return B[0][1]
+	
+	
+	
 
 
 
