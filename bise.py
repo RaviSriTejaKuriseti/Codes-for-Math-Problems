@@ -28,6 +28,10 @@ def binarysearch(L,left,right,k):
 		return binarysearch(L,left,mid,k)
 	else:
 		return -1
+	
+#BISECTION SEARCH TO CHECK BETWEEN WHICH ELEMENTS GIVEN ELEMENT(k) LIES
+#BINARY SEARCH TO FIND GIVEN ELEMENT(k) PERFECTLY
+#ARRAY SHOULD ALREADY BE SORTED
 				
 
 		
