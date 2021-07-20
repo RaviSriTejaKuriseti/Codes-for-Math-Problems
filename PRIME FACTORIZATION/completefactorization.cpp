@@ -263,16 +263,31 @@ vector<ll>factorsarray(ll n){
     vector<ll>factors;
     vector<ll>ext;
     factors.push_back(1);
+    vector<vector<ll>>lookup;
+    for(auto x:pfm){
+        ll pro=1;
+        vector<ll>vc;
+        vc.push_back(1);
+        for(int i=1;i<=x.second;i++){
+            pro*=x.first;
+            vc.push_back(pro);
+
+        }
+        lookup.push_back(vc);
+    }
+
     ll ans=0;
+    int ct=0;
     for(auto x:pfm){
        for(int i=1;i<=x.second;i++){
            for(auto y:factors){
-                ans=y*fpower(x.first,i);
+                ans=y*lookup[ct][i];
                 ext.push_back(ans);
             }
 
         }
         concat(factors,ext);
+        ct+=1;
 
     }
     return factors;
